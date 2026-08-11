@@ -1,0 +1,89 @@
+# Vector Click repository ignore rules
+
+# Out-of-source build and distribution directories
+/build/
+/build-*/
+/cmake-build-*/
+/_build/
+/out/
+/dist/
+
+# Build output inside the repository's future Source Files tree
+/Source Files/build/
+/Source Files/build-*/
+/Source Files/cmake-build-*/
+/Source Files/_build/
+/Source Files/out/
+/Source Files/dist/
+
+# CMake, CTest, and Ninja generated state
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+Testing/
+.ninja_deps
+.ninja_log
+compile_commands.json
+CMakeUserPresets.json
+
+# Visual Studio local state and intermediate databases
+.vs/
+*.vcxproj.user
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.opendb
+*.idb
+*.ipch
+*.tlog
+*.lastbuildstate
+ipch/
+
+# Zig caches and generated output
+.zig-cache/
+zig-cache/
+zig-out/
+
+# Python helper caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Other compiler, language-server, coverage, profiling, and sanitizer caches
+.cache/
+.clangd/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# Crash dumps can contain private process memory and do not belong in the repo
+*.dmp
+*.mdmp
+*.stackdump
+
+# Local editor and IDE state
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Vector Click portable settings
+VectorClick settings.json
+VectorClick settings.json.tmp
+Vector Click settings.json
+Vector Click settings.json.tmp
