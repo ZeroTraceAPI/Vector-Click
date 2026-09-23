@@ -8,7 +8,7 @@
 /out/
 /dist/
 
-# Build output inside the repository's future Source Files tree
+# Build output inside the repository's Source Files tree
 /Source Files/build/
 /Source Files/build-*/
 /Source Files/cmake-build-*/
@@ -83,7 +83,5 @@ Thumbs.db
 desktop.ini
 
 # Local Vector Click portable settings
-VectorClick settings.json
 VectorClick settings.json.tmp
-Vector Click settings.json
 Vector Click settings.json.tmp
