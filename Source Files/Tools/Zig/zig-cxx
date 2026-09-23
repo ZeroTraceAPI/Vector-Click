@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+zig_bin="${VECTORCLICK_ZIG:-zig}"
+exec "$zig_bin" c++ -target x86_64-windows-gnu -fno-lto "$@"

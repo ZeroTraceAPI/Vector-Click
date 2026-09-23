@@ -1,0 +1,45 @@
+#define IDI_VECTORCLICK 101
+#define IDI_VECTORCLICK_RUNNING 102
+
+#define VS_FFI_FILEFLAGSMASK 0x0000003FL
+#define VOS_NT_WINDOWS32 0x00040004L
+#define VFT_APP 0x00000001L
+#define VFT2_UNKNOWN 0x00000000L
+#define RT_MANIFEST 24
+
+LANGUAGE 0, 0
+
+1 VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004B0"
+        BEGIN
+            VALUE "CompanyName", "ZeroTraceAPI\0"
+            VALUE "FileDescription", "Vector Click mouse and keyboard automation utility\0"
+            VALUE "FileVersion", "1.0.0.0\0"
+            VALUE "InternalName", "VectorClick\0"
+            VALUE "OriginalFilename", "Vector Click.exe\0"
+            VALUE "ProductName", "Vector Click\0"
+            VALUE "ProductVersion", "1.0.0.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0000, 1200
+    END
+END
+
+LANGUAGE 9, 1
+
+1 RT_MANIFEST "VectorClick.manifest"
+
+IDI_VECTORCLICK ICON "VectorClick.ico"
+IDI_VECTORCLICK_RUNNING ICON "VectorClickRunning.ico"

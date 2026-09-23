@@ -1,0 +1,184 @@
+name: Bug Report (Guided)
+description: Report a bug, crash, or unexpected behavior in Vector Click.
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > Before submitting, please review [CONTRIBUTING.md](https://github.com/ZeroTraceAPI/Vector-Click/blob/main/CONTRIBUTING.md). Bug reports and feature requests do not require the pull-request Contribution agreement, but the guide explains reporting expectations, project scope, and how submissions are handled.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > Do not include private or sensitive information. Review screenshots, videos, error messages, diagnostics, and other attached files before submitting them.
+        >
+        > If this may be a security vulnerability, do not submit it as a public issue. Follow [Reporting a Vulnerability](https://github.com/ZeroTraceAPI/Vector-Click/blob/main/SECURITY.md#reporting-a-vulnerability) for private reporting instructions.
+
+  - type: checkboxes
+    attributes:
+      label: Before reporting
+      options:
+        - label: I searched existing issues to make sure this was not already reported.
+          required: true
+
+        - label: I tested this with the latest available Vector Click version, if possible.
+          required: false
+
+  - type: dropdown
+    attributes:
+      label: Area
+      description: Which part of Vector Click has the issue?
+      options:
+        - Mouse or keyboard input
+        - Timing, repeat, or action behavior
+        - Target selection or compatibility
+        - Stop, Emergency Stop, cleanup, or hotkeys
+        - Interface, display scaling, or accessibility
+        - Portable settings or privacy behavior
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe the issue
+      description: |
+        What happened?
+
+        Explain the problem clearly. Include what you were doing when the issue happened.
+      placeholder: |
+        Example:
+        Vector Click stopped the run after I selected a target window and started a fixed-position mouse action.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the issue.
+      placeholder: |
+        1.
+        2.
+        3.
+        4.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+      placeholder: |
+        Example:
+        The run should have continued while the selected target remained valid and foreground.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Operating system
+      description: Enter the operating system and version. Vector Click officially targets 64-bit Windows 10 and Windows 11; if testing elsewhere, identify that environment clearly.
+      placeholder: "Windows 11 (version / build), Windows 10 22H2, or Linux with Wine (version)"
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: System architecture
+      options:
+        - x64
+        - ARM64
+        - x86
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Compatibility layer or virtual machine, if applicable
+      description: Identify Wine, Proton, a virtual machine, Windows-on-ARM emulation, or another compatibility environment when relevant.
+      placeholder: "Wine (version), Proton (version), VMware, Hyper-V, or Windows x64 emulation on ARM64"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Vector Click version / file name
+      description: Enter the Vector Click version or exact executable file name you are using, if known.
+      placeholder: "Vector Click version, for example 1.0.0.0, or exact executable file name"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Display resolution and scaling
+      description: Include the display resolution and scaling percentage when relevant, especially for interface or multi-monitor issues.
+      placeholder: "1920x1080 at 125%"
+    validations:
+      required: false
+
+  - type: dropdown
+    attributes:
+      label: Vector Click administrator mode, if applicable
+      options:
+        - "No"
+        - "Yes"
+        - Not sure
+        - Not applicable
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Relevant Vector Click settings
+      description: |
+        List the settings related to the issue when applicable.
+
+        Useful details may include the mouse button or keyboard key, action pattern, fixed or randomized timing, random variation style, Down duration, Action spacing, current or fixed cursor position, input method, selected target, target recovery choice, background input, safety hotkeys, Safety Shield, screen-capture hiding, and portable settings.
+
+        For timing, targeting, or safety issues, use conservative settings and the shortest practical test run that reproduces the problem.
+      placeholder: |
+        Example:
+        Input: Left mouse button
+        Action: Single
+        Interval: 10 ms fixed
+        Position: Fixed
+        Input method: Foreground target input
+        Target: selected application window
+        Background input: Off
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Status, errors, diagnostics, or other useful information
+      description: |
+        Paste relevant Vector Click status text, diagnostics, operating-system error messages, or other useful information.
+
+        Optional: If the diagnostic report still reflects the issue, use About > Copy Diagnostic Report and paste it here. Review it before submitting and remove anything you do not want to share.
+      placeholder: |
+        Paste the optional diagnostic report, relevant status text, diagnostics, or error messages here.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Screenshots or video
+      description: |
+        Optional.
+
+        Attach screenshots or a short video showing the issue when useful. Remove or obscure private window titles, account information, personal files, and other sensitive content.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional notes
+      description: Anything else that may help reproduce, explain, or understand the issue.
+    validations:
+      required: false

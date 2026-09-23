@@ -1,0 +1,169 @@
+name: Feature Request (Guided)
+description: Suggest an improvement, new option, or new feature for Vector Click.
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > Before submitting, please review [CONTRIBUTING.md](https://github.com/ZeroTraceAPI/Vector-Click/blob/main/CONTRIBUTING.md). Bug reports and feature requests do not require the pull-request Contribution agreement, but the guide explains reporting expectations, project scope, and how submissions are handled.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > Do not include private or sensitive information. Review screenshots, mockups, examples, and other attached files before submitting them.
+
+  - type: checkboxes
+    attributes:
+      label: Before requesting
+      options:
+        - label: I searched existing issues to make sure this was not already requested.
+          required: true
+
+        - label: I checked the latest available Vector Click version, if possible.
+          required: false
+
+  - type: dropdown
+    attributes:
+      label: Area
+      description: Which part of Vector Click is this feature for?
+      options:
+        - Mouse or keyboard input
+        - Timing, repeat, or action behavior
+        - Targeting or application compatibility
+        - Safety, cleanup, or hotkeys
+        - Interface, display scaling, or accessibility
+        - Portable settings or privacy behavior
+        - Documentation or repository
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe the feature
+      description: |
+        What would you like to see added or improved?
+
+        Explain the idea clearly. Include what the feature should do and how it could help.
+      placeholder: |
+        Example:
+        Add named local profiles so several commonly used Vector Click configurations can be saved and restored without replacing the current portable settings file.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Problem or limitation
+      description: What issue, limitation, or inconvenience would this solve?
+      placeholder: |
+        Example:
+        Switching between several applications currently requires re-entering the same timing and input settings each time.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Proposed solution
+      description: Describe how you think this feature could work.
+      placeholder: |
+        Example:
+        Add a local profile list with Save, Load, Rename, and Delete actions while keeping target-window selections session-only.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Alternatives considered
+      description: |
+        Optional.
+
+        Have you considered any alternative solutions, settings, or workarounds?
+      placeholder: |
+        Example:
+        Keeping separate settings files works manually, but it is easy to overwrite or load the wrong one.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Use case
+      description: |
+        Optional.
+
+        Describe when or why this feature would be useful.
+      placeholder: |
+        Example:
+        This would help users who regularly switch between different permitted desktop automation tasks with different timing and input settings.
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Operating system, if relevant
+      description: Enter the operating system and version when the request depends on a particular environment.
+      placeholder: "Windows 11 (version / build), Windows 10 22H2, or Linux with Wine (version)"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Compatibility layer or virtual machine, if applicable
+      placeholder: "Wine (version), Proton (version), VMware, Hyper-V, or another compatibility environment"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Vector Click version / file name, if relevant
+      description: Enter the Vector Click version or exact executable file name if this request is tied to a specific version.
+      placeholder: "Vector Click version, for example 1.0.0.0, or exact executable file name"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Display resolution and scaling, if relevant
+      placeholder: "3840x2160 at 225%"
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Input method or target mode, if relevant
+      placeholder: "Automatic, Standard input, Foreground target input, Targeted window messages, or Unicode text input"
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Relevant Vector Click settings, if any
+      description: List any existing settings or behavior that are important to the request.
+      placeholder: |
+        Example:
+        Random interval: On
+        Variation style: Drifting
+        Position: Fixed
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Screenshots, mockups, or examples
+      description: |
+        Optional.
+
+        Add screenshots, mockups, references, examples, or extra context if it helps explain the feature.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional notes
+      description: Anything else that may help explain, evaluate, or understand the request.
+    validations:
+      required: false

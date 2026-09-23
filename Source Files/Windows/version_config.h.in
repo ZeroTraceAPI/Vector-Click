@@ -1,0 +1,7 @@
+#pragma once
+
+namespace vectorclick::win {
+
+inline constexpr wchar_t ApplicationVersion[] = L"@PROJECT_VERSION@";
+
+} // namespace vectorclick::win
