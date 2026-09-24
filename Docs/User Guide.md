@@ -12,7 +12,34 @@ For a more detailed explanation of supported behavior, input routing, compatibil
 - Start with conservative timing and a short repeat count when testing an unfamiliar permitted application.
 - Review the Start / Stop and Emergency Stop hotkeys before starting.
 - Run Vector Click normally unless a selected elevated target requires matching administrator privileges.
+- Keep Windows security software and real-time protection enabled. Vector Click does not require Microsoft Defender, SmartScreen, or third-party antivirus protection to be disabled.
+- If security software warns about or detects Vector Click, verify that the file came from the official release, compare its checksum with the published release checksums, and report the warning or detection if needed. Do not disable protection solely to run Vector Click.
 - When testing more than one Vector Click version, close the other copy first so separate versions do not compete for hotkeys or portable settings.
+
+## Verify Release Checksums on Windows
+
+Official Vector Click releases may include `SHA-256_Checksums.txt` and `SHA-512_Checksums.txt`. These files list the expected checksum for each manually uploaded release asset. You can calculate the checksum of the downloaded executable on Windows and compare it with the published value before running the file.
+
+1. Download the Vector Click executable and the checksum file you want to use from the same official GitHub release.
+2. Place them in the same folder.
+3. Open PowerShell in that folder. One way is to right-click empty space in File Explorer and choose **Open in Terminal**.
+4. For SHA-256, run:
+
+```powershell
+Get-FileHash -LiteralPath ".\Vector-Click_v1.0.0.0.exe" -Algorithm SHA256
+```
+
+5. For SHA-512, run:
+
+```powershell
+Get-FileHash -LiteralPath ".\Vector-Click_v1.0.0.0.exe" -Algorithm SHA512
+```
+
+Replace `Vector-Click_v1.0.0.0.exe` with the actual executable name for the release you downloaded. PowerShell displays the calculated value in the **Hash** column. Compare that value character-for-character with the value beside the same executable name in `SHA-256_Checksums.txt` or `SHA-512_Checksums.txt`. Uppercase and lowercase hexadecimal letters are equivalent.
+
+A matching checksum confirms that the downloaded file contains the same bytes as the file described by the published checksum. If the value does not match, do not run the file. Delete it, download the asset again from the official Releases page, and compare it again. If a fresh official download still does not match the published checksum, report the mismatch.
+
+A matching checksum verifies file integrity against the published value. It does not by itself prove that software is free of every vulnerability or malicious behavior.
 
 ## Basic Page
 

@@ -10,6 +10,18 @@ Older releases, development previews, archived files, forks, redistributed copie
 
 Users should download Vector Click from the official [repository](https://github.com/ZeroTraceAPI/Vector-Click) or its [Releases page](https://github.com/ZeroTraceAPI/Vector-Click/releases) when possible.
 
+## Security Software Warnings and Detections
+
+Vector Click does not require Microsoft Defender Antivirus, Microsoft Defender SmartScreen, real-time protection, cloud-delivered protection, or third-party security software to be disabled. Do not disable security protection solely to run Vector Click.
+
+A newly published or unsigned executable may receive a SmartScreen reputation warning when Windows does not yet have enough reputation information about the file or publisher. An unrecognized-app reputation warning is not by itself the same as an antivirus malware detection, but it should still be treated cautiously. Verify that the file came from the official Releases page and compare its checksum with the checksums published for that release before deciding whether to run it.
+
+If Microsoft Defender or another security product reports a malware, potentially unwanted application, or other security detection, leave the protection enabled while the result is investigated. Verify the exact release asset and checksum first. If the checksum does not match the official release, do not run the file. If the checksum matches and the detection remains, report the Vector Click version, exact checksum, security product, detection name, and any safe-to-share details so the result can be reproduced and reviewed. Confirmed false positives may be submitted to the relevant security vendor when appropriate.
+
+Published checksums can confirm that a file matches the exact bytes released by the project. They do not prove that software is free of every vulnerability or malicious behavior, and security-product verdicts can change as detection systems are updated.
+
+Windows users who want to compare a downloaded executable with the published SHA-256 or SHA-512 value can follow [Verify Release Checksums on Windows](Docs/User%20Guide.md#verify-release-checksums-on-windows) in the User Guide.
+
 ## Reporting a Vulnerability
 
 Please do not report security vulnerabilities through public issues, discussions, pull requests, screenshots, videos, or comments.
